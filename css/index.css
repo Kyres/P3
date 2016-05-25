@@ -1,0 +1,249 @@
+body, html {
+height: 100%!important;
+}
+*{
+	  -webkit-box-sizing: border-box; 
+	  box-sizing: border-box; 
+}
+html{
+	background-color: #f1f1f1
+}
+body{
+
+	background-color:#64BED9;
+	margin: 0 auto;
+
+	line-height: 1.5;
+	
+	
+}body, button, input, select, textarea {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    font-family: "Helvetica Neue",Helvetica,STHeiTi,sans-serif;
+}a{
+	text-decoration: none;
+	color: #fff;
+	z-index: 888;
+}
+@media only screen and (min-device-width:1366px) {
+	body {
+		margin-right: auto!important;
+		margin-left: auto!important;
+		max-width: 750px
+	}
+}
+@media only screen and (min-device-width:756px) {
+	body {
+		margin-right: auto!important;
+		margin-left: auto!important;
+		max-width: 420px
+	}
+}
+#indexPage{
+	height:100%;
+}
+#indexPage .text-title{
+	height: 20%;
+	position: absolute;bottom: 0;
+a
+}
+.hidde{
+	display: none;
+}
+.map{
+	width: 320px;
+	height: 386px;
+	 	background-size:100% 100%; 
+	background: url(../images/map.png) no-repeat 10px 10px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+      margin: 0 auto;
+	
+}
+
+
+.map>div{
+	color: #fff;
+	 z-index: 999;
+	 display: inline-block;
+}
+
+.name1{
+	position: relative;
+    left: 154px;
+    top: 97px;
+
+
+}
+.name2{
+    position: relative;
+    left: 127px;
+    top: 218px;
+}
+.name3{
+	position: relative;
+    left: 5px;
+    top: 288px;
+}
+.name4{
+	position: relative;
+     left: -84px;
+    top: 328px;
+
+}
+.text-title{
+	text-align: center;
+}
+.text-title img{
+	width: 70%;
+}
+
+.img_re{
+position: relative;
+    right: 0px;
+    bottom: 130px;
+    text-align: right;
+    padding-right: 10px;
+   height: 10px;
+}
+.img_le{
+position: relative;
+left: 20px;
+top: 70px;
+height: 2px
+}
+.img_re img{
+	width: 100px;
+}
+.img_le img{
+	width: 100px;
+}
+.clear{
+	clear: both;
+}
+
+
+
+.head-img img{
+	width: 55px;
+}
+.head-img{
+	padding-top: 10px;
+	text-align: center;
+	height: 15%!important;
+	overflow: hidden;
+}
+
+.center-btn img{
+	width: 65px;
+}
+.center-btn{
+	text-align: center;
+	height: 15%!important;
+	overflow: hidden;
+}
+.city_img {
+	text-align: center;
+	height: 50%;
+}
+.city_img img{
+	width: 190px;
+	padding: 10px;
+}
+#temper{
+	margin:0;
+	padding: 0;
+	color: #fff;
+	position: relative;
+	top: -20px
+}
+#showBtn{
+	text-align: center;
+	height: 25%;
+}
+#showBtn img{
+	width: 100px;
+}
+.footer-btnGroup{
+
+	overflow: hidden;
+}
+#footer-btns{
+	/*width: 588px;*/
+	    width: 140%;
+	height: 84px;
+	overflow: hidden;
+	text-align: center;
+
+}
+#footer-btns img{
+	width: 13%;
+}
+
+#cityPage{
+	position: relative;
+	    overflow: hidden;
+	    height: 100%;
+}
+#footer-btns img{
+	cursor:pointer;
+}
+.showDollDate{
+
+position: absolute;
+
+	width: 100%;
+	max-width: 420px;
+	bottom: 0;
+	height: 100%;
+	background: rgba(255,255,255,0.4);
+}
+.data-cityName{
+	color: #fff;
+	text-align: center;
+		height: 10%!important;
+		overflow: hidden;
+		    padding: 5%;
+/*	padding: 20px;*/
+	background: rgba(128,0,255,0.6);
+}
+.date-list{
+		background: rgba(39,40,34,0.8);
+		height: 10%!important;
+
+	margin-top: 3%;
+	overflow: hidden;
+}
+.date-list div{
+/*	//display: inline-block;*/
+	color: #fff;
+	display:inline;
+	display:inline-block;
+	padding-top: 2px;
+	 text-align:center;
+	  vertical-align:middle;
+	/*line-height: 100px;*/
+}
+.date-list img{
+	    width: 46px;
+	    height: auto;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.list-city-date{
+	font-size: 30px;
+	margin-left: 40px;
+}
+table,table tbody,tr{
+	width: 100%;
+	height: 100%;
+	color:#000;
+}
+td{
+	color: #fff;
+}
