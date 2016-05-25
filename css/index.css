@@ -23,7 +23,9 @@ body{
 }
 .body2{
 		background:url(../images/background2.png);
-	    background-attachment: fixed;
+	  /*  background-attachment: fixed;
+    background-repeat: no-repeat;*/
+       background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
@@ -66,8 +68,9 @@ a
 .map{
 	width: 320px;
 	height: 386px;
-	 	background-size:100% 100%; 
-	background: url(../images/map.png) no-repeat 10px 10px;
+	 background-size:100% 100%; 
+	background: url(../images/map1.png);
+	background-size: 220px;
     background-position: center bottom;
     background-repeat: no-repeat;
       margin: 0 auto;
@@ -100,8 +103,8 @@ a
 }
 .name4{
 	position: relative;
-     left: -84px;
-    top: 328px;
+     left: 40px;
+    top: 290px;
 
 }
 .text-title{
@@ -145,14 +148,16 @@ height: 2px
 	text-align: center;
 	height: 15%!important;
 	overflow: hidden;
+	display:none;
 }
 
 .center-btn img{
-	width: 65px;
+	width: 120px;
 }
 .center-btn{
+	padding-top: 8%;
 	text-align: center;
-	height: 15%!important;
+	height: 30%!important;
 	overflow: hidden;
 }
 .city_img {

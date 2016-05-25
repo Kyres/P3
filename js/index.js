@@ -1,10 +1,15 @@
 	$(function(){
 		var doll = new Array();  //先声明一维
+		var city = new Array();  //先声明一维
 		doll[0]=1;
 		doll[1]=1;
 		doll[2]=1;
 		doll[3]=1;
 		doll[4]=1;
+		city[1]="Auckland";
+		city[2]="Wellington";
+		city[3]="Christchurch";
+		city[4]="Queenstown";
 
 		var audio1=$("#audio1")[0];
 		var audio2=$("#audio2")[0];
@@ -15,6 +20,11 @@ var left=0;
 var btnsShow=false;
 audio3.play();
 function goPage($page){
+		 $.getJSON("http://liuxin.lxliu.cn/tcpPush/getWeather?city="+curCity,
+			function(data){
+			$("#cur_temp").text(data.temp)
+			$("#max_temp").text(data.tempMx)
+ 			});
 	$("body").removeClass("body1");
 	$("body").addClass("body2");
 	audio1.play();
@@ -66,6 +76,7 @@ window.event.cancelBubble = true;
 	}
 
 
+
  });
 $("#footer-btns").on("swiperight", function(e){
 		if (e && e.stopPropagation) {//非IE浏览器 
@@ -88,6 +99,12 @@ jQuery(document).on('swipeleft', "#cityPage", function() {
 				return ;
 		}else{
 			curCity=curCity+1;
+					 $.getJSON("http://liuxin.lxliu.cn/tcpPush/getWeather?city="+curCity,
+			function(data){
+			$("#cur_temp").text(data.temp)
+			$("#max_temp").text(data.tempMx)
+ 			});
+
 			$(".city-title-img").attr("src","images/Doll "+doll[curCity]+".png");
 			audio2.play();
 			$(this).animate({
@@ -108,6 +125,11 @@ jQuery(document).on('swiperight', "#cityPage", function() {
 				return ;
 		}else{
 			curCity=curCity-1;
+					 $.getJSON("http://liuxin.lxliu.cn/tcpPush/getWeather?city="+curCity,
+			function(data){
+			$("#cur_temp").text(data.temp)
+			$("#max_temp").text(data.tempMx)
+ 			});
 			audio2.play();
 
 	$(".city-title-img").attr("src","images/Doll "+doll[curCity]+".png");
@@ -134,7 +156,7 @@ jQuery(document).on('swiperight', "#cityPage", function() {
 				return ;
 		}else{
 	$("#cityPage").trigger("swiperight");
-		$(this).text("城市"+curCity)
+		$(".data-cityName").text(city[curCity])
 			$(this).animate({
 				left:150,
 				opacity:0
@@ -153,7 +175,7 @@ jQuery(document).on('swipeleft', ".data-cityName", function() {
 				return ;
 		}else{
 			$("#cityPage").trigger("swipeleft");
-		$(this).text("城市"+curCity)
+		$(".data-cityName").text(city[curCity])
 			$(this).animate({
 				left:-150,
 				opacity:0
@@ -188,11 +210,14 @@ window.event.cancelBubble = true;
 
 
 jQuery(document).on('click', ".city-title-img", function() {
-
+	$(".data-cityName").text(city[curCity])
 	  $(".showDollDate").slideDown(1000);
  });
 	})
 
 jQuery(document).on('click', ".date-list", function() {
 	 $(".showDollDate").slideUp(1000);
- });
+
+
+
+	  });
