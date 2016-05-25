@@ -15,6 +15,8 @@ var left=0;
 var btnsShow=false;
 audio3.play();
 function goPage($page){
+	$("body").removeClass("body1");
+	$("body").addClass("body2");
 	audio1.play();
 	curCity=parseInt($page);
 	$(".cityImage").attr("src","images/city"+curCity+".gif");

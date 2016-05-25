@@ -14,9 +14,20 @@ body{
 	margin: 0 auto;
 
 	line-height: 1.5;
+}
+.body1{
+		background:url(../images/background1.png);
 	
-	
-}body, button, input, select, textarea {
+	        background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.body2{
+		background:url(../images/background2.png);
+	    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body, button, input, select, textarea {
     font-size: 1rem;
     line-height: 1.5;
     color: #333;
@@ -42,6 +53,7 @@ body{
 }
 #indexPage{
 	height:100%;
+	position:relative;
 }
 #indexPage .text-title{
 	height: 20%;
